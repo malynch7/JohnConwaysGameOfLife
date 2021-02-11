@@ -1,0 +1,16 @@
+.cell {
+    height: 0;
+    padding-top: 30px;
+    width: 30px;
+    background: grey;
+    border: .5px solid black;
+}
+
+.cell:hover,
+.cell:focus {
+    background: darkgreen;
+}
+
+.cell.alive {
+    background: limegreen;
+}

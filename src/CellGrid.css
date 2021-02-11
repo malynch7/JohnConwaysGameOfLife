@@ -1,0 +1,12 @@
+.cell-grid {
+    margin: auto;
+    width: 90%;
+    max-width: 1000px;
+
+
+}
+
+.cell-row {
+    display: flex;
+    justify-content: center;
+}
