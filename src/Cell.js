@@ -7,7 +7,6 @@ export default function Cell({data, gridDimensions, updateGrid}) {
     }
 
     const style = (gridDimensions.columns < 11) ? {} : {
-        paddingTop: `${100 / gridDimensions.columns}%`,
         width: `${100 / gridDimensions.columns}%`
     }
 

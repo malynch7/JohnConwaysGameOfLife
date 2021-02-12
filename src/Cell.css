@@ -1,16 +1,22 @@
 .cell {
-    height: 0;
-    padding-top: 30px;
     width: 30px;
-    background: grey;
-    border: .5px solid black;
+    background: whitesmoke;
+    border: .25px solid lightgrey;
+}
+
+.cell:after {
+    content: "";
+    display: block;
+    padding-top: 100%;
 }
 
 .cell:hover,
 .cell:focus {
     background: darkgreen;
+    opacity: .5;
 }
 
 .cell.alive {
-    background: limegreen;
+    background: var(--cell-color);
+    border-radius: 3px;
 }

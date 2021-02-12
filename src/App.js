@@ -6,8 +6,8 @@ import './App.css'
 
 function App() {
     const interval = useRef(null);
-    const [rowCount, setRowCount] = useState(10)
-    const [columnCount, setColumnCount] = useState(10)
+    const [rowCount, setRowCount] = useState(25)
+    const [columnCount, setColumnCount] = useState(25)
     const [generation, setGeneration] = useState(0)
     const [isRunning, setRunning] = useState(false);
     const [grid, setGrid] = useState(null);
@@ -17,6 +17,8 @@ function App() {
         setRowCount(parseInt(e.target.value));
         setColumnCount(parseInt(e.target.value));
         setGrid(freshGrid(parseInt(e.target.value), parseInt(e.target.value)));
+        setGeneration(0);
+        setGenZeroGrid(null);
     }
 
     const resetGrid = () => {
@@ -106,30 +108,41 @@ function App() {
     const pause = () => {
         setRunning(false);
     }
+    const step = () => {
+        if (generation === 0) setGenZeroGrid(grid);
+        incrementGeneration();
+    }
 
     if (grid === null) setGrid(freshGrid(rowCount, columnCount));
 
-  return (
-      <div className='main'>
-        <h1 className='site-header'>React Life</h1>
-        <CellGrid
-            updateCell = {updateCell}
-            grid = {grid}
-        />
-        <p>Generation: {generation}</p>
-        <select onChange={changeGridDimensions}>
-            <option value='10'>10 x 10</option>
-            <option value='25'>25 x 25</option>
-            <option value='50'>50 x 50</option>
-        </select>
-        <button onClick={incrementGeneration}>Increment Generation</button>
-          <button onClick={play}>Play</button>
-          <button onClick={pause}>Pause</button>
-          <button onClick={resetGrid}>Reset</button>
-          <button onClick={clearGrid}>Clear</button>
-      </div>
+    return (
+        <div className='main'>
+            <h1 className='site-header'>React Life</h1>
+            <CellGrid
+                updateCell={updateCell}
+                grid={grid}
+            />
+            <h4>Generation: {generation}</h4>
+            <div id='control-panel'>
+                <label htmlFor='grid-size-select'>Grid Size:</label>
+                <select value={rowCount.toString()} id='grid-size-select' onChange={changeGridDimensions}>
+                    <option value='10'>10 x 10</option>
+                    <option value='25' >25 x 25</option>
+                    <option value='50'>50 x 50</option>
+                    <option value='100'>100 x 100</option>
+                </select>
+                <div className='button-row'>
+                    <button onClick={step}>Step</button>
+                    <button onClick={isRunning ? pause : play}>{isRunning ? 'Pause' : 'Play'}</button>
+                    <button onClick={resetGrid}>Reset</button>
+                    <button onClick={clearGrid}>Clear</button>
+                </div>
 
-  );
+            </div>
+
+        </div>
+
+    );
 }
 
 export default App;

@@ -1,7 +1,67 @@
+html {
+    background: lightgrey;
+}
+
 .main {
     text-align: center;
 }
 
-button {
+.site-header {
+    color: green;
+    font-size: 48px;
+}
+
+#control-panel {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+.button-row button {
     margin: .5em;
+    background: green;
+    color: white;
+    border-radius: 7px;
+    padding: .5em 1.5em;
+    border: none;
+    box-shadow: 1px 1px 5px grey;
+}
+
+.button-row button:focus,
+#control-panel select:focus {
+    outline: none;
+}
+
+.button-row button:active {
+    background: #009b00;
+    box-shadow: none;
+}
+
+#control-panel label {
+    padding-top: 1.8em;
+}
+
+#control-panel option:hover{
+    background: white;
+}
+
+#grid-size-select {
+    margin: 2em 5em .5em .5em;
+    background: green;
+    border: none;
+    color: white;
+    border-radius: 7px;
+    padding: .4em 1em;
+    box-shadow: 1px 1px 5px grey;
+}
+
+@media only screen and (min-width: 580px) {
+    #grid-size-select {
+        margin: .5em 5em .5em .5em;
+    }
+
+    #control-panel label {
+        padding-top: .6em;
+    }
+
 }
