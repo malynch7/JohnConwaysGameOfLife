@@ -1,7 +1,7 @@
 .cell {
     width: 30px;
     background: whitesmoke;
-    border: .25px solid lightgrey;
+    border: .25px solid #c4a38e;
 }
 
 .cell:after {
@@ -10,13 +10,13 @@
     padding-top: 100%;
 }
 
-.cell:hover,
-.cell:focus {
-    background: darkgreen;
-    opacity: .5;
-}
-
 .cell.alive {
     background: var(--cell-color);
     border-radius: 3px;
 }
+
+.cell:hover,
+.cell:focus {
+    background: #8cb18c;
+}
+

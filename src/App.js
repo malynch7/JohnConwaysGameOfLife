@@ -1,5 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react';
 import CellGrid from "./CellGrid";
+import InfoPanel from "./InfoPanel"
 import './App.css'
 
 
@@ -137,9 +138,10 @@ function App() {
                     <button onClick={resetGrid}>Reset</button>
                     <button onClick={clearGrid}>Clear</button>
                 </div>
-
             </div>
-
+            <InfoPanel
+                generation={generation}
+            />
         </div>
 
     );
