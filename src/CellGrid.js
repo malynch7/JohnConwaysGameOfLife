@@ -5,10 +5,9 @@ import './CellGrid.css';
 
 export default function CellGrid({grid, updateCell}) {
 
-    let gridUI = () => {
-        return grid.map((cellRow) => {
-            return (
-                <div key={`row${Math.floor(cellRow[0].id)}`} className="cell-row">
+    return grid.map((cellRow) => {
+        return (
+            <div key={`row${Math.floor(cellRow[0].id)}`} className="cell-row">
                 {
                     cellRow.map((cell) => {
                         return <Cell
@@ -23,13 +22,6 @@ export default function CellGrid({grid, updateCell}) {
                         />
                     })
                 }</div>
-            );
-        });
-    }
-
-     return(
-        <div className='cell-grid'>
-            {gridUI()}
-        </div>
-    );
+        );
+    });
 }

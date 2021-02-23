@@ -1,6 +1,13 @@
 #info-panel {
-    background: burlywood;
-    margin: auto;
-    width: 90%;
-    max-width: 750px;
+    text-align: left;
+}
+
+#info-panel h4 {
+    margin-left: 1em;
+}
+
+@media only screen and (min-width: 960px) {
+    #info-panel {
+        grid-area: 2 / 2 / 3 / 3;
+    }
 }

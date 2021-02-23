@@ -1,7 +1,7 @@
-.cell-grid {
+.cell-row {
     margin: auto;
     width: 90%;
-    max-width: 750px;
+    max-height: 100%
     /*border: 5px solid #6d6d6d;*/
 
 }

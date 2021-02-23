@@ -1,15 +1,33 @@
 html {
-    background: #c4a38e;
+    background-image: url('./assets/bark.jpg');
+    background-size: cover;
 }
 
-.main {
-    text-align: center;
+.container {
+    background: burlywood;
+    margin: 1em auto 1em auto;
+    width: 90%;
+    max-width: 750px;
+    border: 1px solid saddlebrown;
+    border-radius: 30px;
+    box-shadow: inset 0 0 15px #695247;
+    padding: 1em 1em 2em 1em;
+}
+
+.cell-grid {
+    margin: auto;
+    width: 90%;
+    max-width: 700px;
+    /*border: 5px solid #6d6d6d;*/
+
 }
 
 .site-header {
     color: green;
     font-size: 48px;
+     text-align: center;
 }
+
 
 #control-panel {
     display: flex;
@@ -55,7 +73,7 @@ html {
     box-shadow: 1px 1px 5px grey;
 }
 
-@media only screen and (min-width: 580px) {
+@media only screen and (min-width: 960px) {
     #grid-size-select {
         margin: .5em 5em .5em .5em;
     }
@@ -64,4 +82,14 @@ html {
         padding-top: .6em;
     }
 
+    .main {
+        display: grid;
+        grid-template-columns: 10% 15% auto 15% 10%;
+        grid-template-rows: 5% auto 5%;
+        column-gap: 20px
+    }
+
+    .grid-container {
+        grid-area: 2 / 3 / 3 / 4;
+    }
 }

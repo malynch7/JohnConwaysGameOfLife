@@ -1,7 +1,8 @@
+import './App.css';
 import React, {useState, useRef, useEffect} from 'react';
 import CellGrid from "./CellGrid";
 import InfoPanel from "./InfoPanel"
-import './App.css'
+import ControlPanel from "./ControlPanel";
 
 
 
@@ -117,28 +118,22 @@ function App() {
     if (grid === null) setGrid(freshGrid(rowCount, columnCount));
 
     return (
-        <div className='main'>
-            <h1 className='site-header'>React Life</h1>
-            <CellGrid
-                updateCell={updateCell}
-                grid={grid}
-            />
-            <h4>Generation: {generation}</h4>
-            <div id='control-panel'>
-                <label htmlFor='grid-size-select'>Grid Size:</label>
-                <select value={rowCount.toString()} id='grid-size-select' onChange={changeGridDimensions}>
-                    <option value='10'>10 x 10</option>
-                    <option value='25' >25 x 25</option>
-                    <option value='50'>50 x 50</option>
-                    <option value='100'>100 x 100</option>
-                </select>
-                <div className='button-row'>
-                    <button onClick={step}>Step</button>
-                    <button onClick={isRunning ? pause : play}>{isRunning ? 'Pause' : 'Play'}</button>
-                    <button onClick={resetGrid}>Reset</button>
-                    <button onClick={clearGrid}>Clear</button>
-                </div>
+        <div className='main' style={{height: window.innerHeight}}>
+            <div className={'container grid-container'}>
+                <h1 className='site-header'>React Life</h1>
+                <CellGrid
+                    updateCell={updateCell}
+                    grid={grid}
+                />
             </div>
+
+            <ControlPanel
+                rowCount={rowCount}
+                isRunning={isRunning}
+                step={step}
+                play={play}
+                pause={pause}
+            />
             <InfoPanel
                 generation={generation}
             />
