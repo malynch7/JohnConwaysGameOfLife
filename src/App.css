@@ -6,9 +6,10 @@ html {
 .container {
     background: burlywood;
     margin: 1em auto 1em auto;
-    width: 90%;
+    width: 80%;
     max-width: 750px;
-    border: 1px solid saddlebrown;
+    max-height: 815px;
+    border: 2px solid #695247;
     border-radius: 30px;
     box-shadow: inset 0 0 15px #695247;
     padding: 1em 1em 2em 1em;
@@ -25,71 +26,24 @@ html {
 .site-header {
     color: green;
     font-size: 48px;
-     text-align: center;
-}
-
-
-#control-panel {
-    display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: center;
-}
-
-.button-row button {
-    margin: .5em;
-    background: green;
-    color: white;
-    border-radius: 7px;
-    padding: .5em 1.5em;
-    border: none;
-    box-shadow: 1px 1px 5px grey;
-}
-
-.button-row button:focus,
-#control-panel select:focus {
-    outline: none;
-}
-
-.button-row button:active {
-    background: #009b00;
-    box-shadow: none;
-}
-
-#control-panel label {
-    padding-top: 1.8em;
-}
-
-#control-panel option:hover{
-    background: white;
-}
-
-#grid-size-select {
-    margin: 2em 5em .5em .5em;
-    background: green;
-    border: none;
-    color: white;
-    border-radius: 7px;
-    padding: .4em 1em;
-    box-shadow: 1px 1px 5px grey;
+    text-align: center;
+    text-decoration: underline;
 }
 
 @media only screen and (min-width: 960px) {
-    #grid-size-select {
-        margin: .5em 5em .5em .5em;
-    }
-
-    #control-panel label {
-        padding-top: .6em;
-    }
 
     .main {
         display: grid;
-        grid-template-columns: 10% 15% auto 15% 10%;
-        grid-template-rows: 5% auto 5%;
-        column-gap: 20px
+        grid-template-columns: 25% auto 25%;
+        grid-template-rows: 1% auto 10%;
+        column-gap: 10px;
+        max-width: 1800px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
     }
 
     .grid-container {
-        grid-area: 2 / 3 / 3 / 4;
+        grid-area: 2 / 2 / 3 / 3;
     }
 }
