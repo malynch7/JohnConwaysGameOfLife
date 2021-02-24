@@ -133,6 +133,9 @@ function App() {
                 step={step}
                 play={play}
                 pause={pause}
+                changeGridDimensions={changeGridDimensions}
+                resetGrid={resetGrid}
+                clearGrid={clearGrid}
             />
             <InfoPanel
                 generation={generation}
