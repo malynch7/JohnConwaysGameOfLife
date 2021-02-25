@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ReactLife/static/css/main.75d242a1.chunk.css",
+    "main.css": "/ReactLife/static/css/main.fc907213.chunk.css",
     "main.js": "/ReactLife/static/js/main.f0f29505.chunk.js",
     "main.js.map": "/ReactLife/static/js/main.f0f29505.chunk.js.map",
     "runtime-main.js": "/ReactLife/static/js/runtime-main.fd24008e.js",
@@ -8,14 +8,14 @@
     "static/js/2.8296e2bb.chunk.js": "/ReactLife/static/js/2.8296e2bb.chunk.js",
     "static/js/2.8296e2bb.chunk.js.map": "/ReactLife/static/js/2.8296e2bb.chunk.js.map",
     "index.html": "/ReactLife/index.html",
-    "static/css/main.75d242a1.chunk.css.map": "/ReactLife/static/css/main.75d242a1.chunk.css.map",
+    "static/css/main.fc907213.chunk.css.map": "/ReactLife/static/css/main.fc907213.chunk.css.map",
     "static/js/2.8296e2bb.chunk.js.LICENSE.txt": "/ReactLife/static/js/2.8296e2bb.chunk.js.LICENSE.txt",
     "static/media/App.css": "/ReactLife/static/media/bark.bf8aae28.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.fd24008e.js",
     "static/js/2.8296e2bb.chunk.js",
-    "static/css/main.75d242a1.chunk.css",
+    "static/css/main.fc907213.chunk.css",
     "static/js/main.f0f29505.chunk.js"
   ]
 }
