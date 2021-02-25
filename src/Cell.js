@@ -1,9 +1,9 @@
 import './Cell.css';
 
-export default function Cell({data, gridDimensions, updateGrid}) {
+export default function Cell({data, gridDimensions, updateCell}) {
 
     const handleClick = () => {
-        updateGrid(data.id, !data.isAlive);
+        updateCell(data.id, !data.isAlive);
     }
 
     const style = (gridDimensions.columns < 11) ? {} : {
