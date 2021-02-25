@@ -29,7 +29,7 @@
 }
 
 .grid-select-wrapper label {
-    padding-top: 1.8em;
+    margin: 1em;
 }
 
 #control-panel option:hover{
@@ -37,7 +37,7 @@
 }
 
 #grid-size-select {
-    margin: 2em 1em .5em 1em;
+    margin: 1em;
     background: green;
     border: none;
     color: white;
@@ -66,7 +66,7 @@
 }
 
 .speed-slider-wrapper label {
-    padding-top: 0;
+    margin: 1em;
 }
 
 .rc-slider {
@@ -87,6 +87,13 @@
 .rc-slider-handle-click-focused:focus{
     border-color: var(--cell-color);
     box-shadow: unset;
+}
+
+.buttons {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 
