@@ -1,5 +1,61 @@
+/*#control-panel {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap-reverse;*/
+/*    justify-content: center;*/
+/*}*/
+
+#control-panel {
+    text-align: center;
+}
+
+.button-row button {
+    margin: .5em;
+    background: green;
+    color: white;
+    border-radius: 7px;
+    padding: .5em 1em;
+    border: none;
+    box-shadow: 1px 1px 5px grey;
+}
+
+.button-row button:focus,
+#control-panel select:focus {
+    outline: none;
+}
+
+.button-row button:active {
+    background: #009b00;
+    box-shadow: none;
+}
+
+#control-panel label {
+    padding-top: 1.8em;
+}
+
+#control-panel option:hover{
+    background: white;
+}
+
+#grid-size-select {
+    margin: 2em 5em .5em .5em;
+    background: green;
+    border: none;
+    color: white;
+    border-radius: 7px;
+    padding: .4em 1em;
+    box-shadow: 1px 1px 5px grey;
+}
+
+.section-header {
+    text-align: center;
+    text-decoration: underline;
+}
+
+
 @media only screen and (min-width: 960px) {
     #control-panel {
-        grid-area: 2 / 4 / 3 / 5;
+        grid-area: 2 / 3 / 3 / 4;
+        height: 350px;
     }
+
 }

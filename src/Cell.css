@@ -1,7 +1,7 @@
 .cell {
     width: 30px;
-    background: whitesmoke;
-    border: .25px solid #c4a38e;
+    background: #ffe8cf;
+    border: .25px solid burlywood;
 }
 
 .cell:after {
