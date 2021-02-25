@@ -126,7 +126,6 @@ function App() {
                     grid={grid}
                 />
             </div>
-
             <ControlPanel
                 rowCount={rowCount}
                 isRunning={isRunning}

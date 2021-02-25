@@ -1,6 +1,7 @@
 html {
     background-image: url('./assets/bark.jpg');
     background-size: cover;
+    min-height:100%;
 }
 
 .container {
