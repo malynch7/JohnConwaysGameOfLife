@@ -37,7 +37,7 @@
 }
 
 #grid-size-select {
-    margin: 2em 5em .5em .5em;
+    margin: 2em 1em .5em 1em;
     background: green;
     border: none;
     color: white;
@@ -51,11 +51,23 @@
     text-decoration: underline;
 }
 
+.grid-select-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 
 @media only screen and (min-width: 960px) {
     #control-panel {
         grid-area: 2 / 3 / 3 / 4;
         height: 350px;
+    }
+    .buttons {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
 }
