@@ -118,7 +118,7 @@ function App() {
     if (grid === null) setGrid(freshGrid(rowCount, columnCount));
 
     return (
-        <div className='main' style={{height: window.innerHeight}}>
+        <div className='main' style={(window.innerWidth > 960) ? {height: window.innerHeight} : {}}>
             <div className={'container grid-container'}>
                 <h1 className='site-header'>React Life</h1>
                 <CellGrid
@@ -127,6 +127,7 @@ function App() {
                 />
             </div>
             <ControlPanel
+                generation={generation}
                 rowCount={rowCount}
                 isRunning={isRunning}
                 step={step}

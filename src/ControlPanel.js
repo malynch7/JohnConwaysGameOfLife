@@ -1,13 +1,14 @@
 import './ControlPanel.css';
 import React from "react";
 
-export default function ControlPanel({rowCount, isRunning, step, play, pause, changeGridDimensions,
-                                         resetGrid, clearGrid}) {
+export default function ControlPanel({grid, setGrid, rowCount, isRunning, step, play, pause, changeGridDimensions,
+                                         resetGrid, clearGrid, generation}) {
 
 
     return (
         <div id='control-panel' className='container'>
             <h3 className={'section-header'}>Controls</h3>
+            <h4>Generation: {generation}</h4>
             <div className={'buttons'}>
                 <div className='button-row'>
                     <button onClick={step}>Step</button>
