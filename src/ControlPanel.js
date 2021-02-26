@@ -125,7 +125,6 @@ export default function ControlPanel({grid, setGrid, generation, setGeneration, 
                         <option value='10'>10 x 10</option>
                         <option value='25' >25 x 25</option>
                         <option value='50'>50 x 50</option>
-                        <option value='100'>100 x 100</option>
                     </select>
                 </div>
             </div>
