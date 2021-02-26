@@ -1,7 +1,8 @@
 .cell {
     width: 30px;
     background: #ffe8cf;
-    border: .25px solid burlywood;
+    border: 1px solid burlywood;
+    border-radius: 2px;
 }
 
 .cell:after {
@@ -10,9 +11,26 @@
     padding-top: 100%;
 }
 
+/*Round grid edges*/
+.cell-row:first-of-type .cell:first-of-type {
+    border-radius: 8px 2px 2px 2px;
+}
+
+.cell-row:first-of-type .cell:last-of-type {
+    border-radius: 2px 8px 2px 2px;
+}
+
+.cell-row:last-of-type .cell:first-of-type {
+    border-radius: 2px 2px 2px 8px;
+}
+
+.cell-row:last-of-type .cell:last-of-type {
+    border-radius: 2px 2px 8px 2px;
+}
+
 .cell.alive {
     background: var(--cell-color);
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .cell:hover,

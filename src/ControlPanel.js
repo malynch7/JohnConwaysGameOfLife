@@ -3,11 +3,13 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import './ControlPanel.css';
 
-export default function ControlPanel({grid, setGrid, generation, setGeneration, genZeroGrid, setGenZeroGrid, rowCount, setRowCount, columnCount, setColumnCount, freshGrid}) {
+export default function ControlPanel({grid, setGrid, generation, setGeneration, rowCount, setRowCount, columnCount,
+                                         setColumnCount, freshGrid}) {
 
     const interval = useRef(null);
     const [isRunning, setRunning] = useState(false);
     const [tickPeriod, setTickPeriod] = useState(200);
+    const [genZeroGrid, setGenZeroGrid] = useState(null);
 
     const changeGridDimensions = (e) => {
         setRowCount(parseInt(e.target.value));
@@ -86,6 +88,7 @@ export default function ControlPanel({grid, setGrid, generation, setGeneration, 
         setTickPeriod(1000 / sliderValue);
     }
 
+
     useEffect( () => {
         if (isRunning) {
             interval.current = setInterval(incrementGeneration, tickPeriod);
@@ -94,11 +97,9 @@ export default function ControlPanel({grid, setGrid, generation, setGeneration, 
     }, [grid, incrementGeneration, isRunning, tickPeriod])
 
 
-
     return (
         <div id='control-panel' className='container'>
             <h3 className={'section-header'}>Controls</h3>
-            <h4>Generation: {generation}</h4>
             <div className={'buttons'}>
                 <div className='button-row'>
                     <button onClick={step}>Step</button>
