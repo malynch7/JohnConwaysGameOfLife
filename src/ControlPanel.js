@@ -90,7 +90,7 @@ export default function ControlPanel({grid, setGrid, generation, setGeneration, 
         if (interval.current === null) return;
 
         if (isRunning) {
-            interval.current = setInterval(() => incrementGeneration(), tickPeriod);
+            interval.current = setInterval(incrementGeneration, tickPeriod);
         }
         return () => clearInterval(interval.current);
     }, [grid,incrementGeneration, isRunning, tickPeriod])
