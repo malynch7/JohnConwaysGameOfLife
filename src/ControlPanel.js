@@ -1,10 +1,10 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useRef, useEffect, useCallback} from 'react';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import './ControlPanel.css';
 
 export default function ControlPanel({grid, setGrid, generation, setGeneration, rowCount, setRowCount, columnCount,
-                                         setColumnCount, freshGrid}) {
+                                         setColumnCount, freshGrid, patterns, pattern, setPattern}) {
 
     const interval = useRef(null);
     const [isRunning, setRunning] = useState(false);
@@ -31,7 +31,7 @@ export default function ControlPanel({grid, setGrid, generation, setGeneration, 
         if (isRunning) setRunning(false);
     }
 
-    const incrementGeneration = () => {
+    const incrementGeneration = useCallback(() => {
         const newGrid = grid.map((cellRow, i) => {
             return cellRow.map((cell, j) => {
                 let neighbors = 0;
@@ -39,18 +39,15 @@ export default function ControlPanel({grid, setGrid, generation, setGeneration, 
                     id: cell.id,
                     isAlive: cell.isAlive
                 };
-
                 //check above
                 if (i !== 0) {
                     if (j !== 0 && grid[i-1][j-1].isAlive) neighbors++;
                     if (grid[i-1][j].isAlive) neighbors++;
                     if (j !== (columnCount - 1) && grid[i-1][j+1].isAlive) neighbors++;
                 }
-
                 //check beside
                 if (j !== 0 && grid[i][j-1].isAlive) neighbors++;
                 if (j !== (columnCount - 1) && grid[i][j+1].isAlive) neighbors++;
-
                 //check below
                 if (i !== rowCount - 1) {
                     if (j !== 0 && grid[i+1][j-1].isAlive) neighbors++;
@@ -68,7 +65,7 @@ export default function ControlPanel({grid, setGrid, generation, setGeneration, 
         })
         setGrid(newGrid);
         setGeneration((prevGeneration) => prevGeneration + 1);
-    }
+    }, [grid, setGrid, rowCount, columnCount, setGeneration]);
 
     const play = () => {
         if (generation === 0) setGenZeroGrid(grid);
@@ -90,11 +87,13 @@ export default function ControlPanel({grid, setGrid, generation, setGeneration, 
 
 
     useEffect( () => {
+        if (interval.current === null) return;
+
         if (isRunning) {
-            interval.current = setInterval(incrementGeneration, tickPeriod);
+            interval.current = setInterval(() => incrementGeneration(), tickPeriod);
         }
         return () => clearInterval(interval.current);
-    }, [grid, incrementGeneration, isRunning, tickPeriod])
+    }, [grid,incrementGeneration, isRunning, tickPeriod])
 
 
     return (
@@ -108,19 +107,32 @@ export default function ControlPanel({grid, setGrid, generation, setGeneration, 
                     <button onClick={clearGrid}>Clear</button>
                 </div>
                 <div className="speed-slider-wrapper">
-                    <label htmlFor="speed-slider">Speed:</label>
-                    <Slider
-                           id="speed-slider"
-                           min={1}
-                           max={20}
-                           defaultValue={5}
-                           onChange={changeSpeed}
+                <label htmlFor="speed-slider">Speed:</label>
+                <Slider
+                    id="speed-slider"
+                    min={1}
+                    max={20}
+                    defaultValue={5}
+                    onChange={changeSpeed}
                     />
                 </div>
-                <div className={'grid-select-wrapper'}>
+                <div className={'select-wrapper pattern-select-wrapper'}>
+                    <label htmlFor='pattern-select'>Pattern:</label>
+                    <select value={pattern}
+                            id='pattern-select'
+                            className={'u-select'}
+                            onChange={(e) => setPattern(e.target.value)}>
+                        { Object.keys(patterns).map( (key) => {
+                            return <option key={key} value={key}>{key}</option>;
+                        })}
+
+                    </select>
+                </div>
+                <div className={'select-wrapper grid-select-wrapper'}>
                     <label htmlFor='grid-size-select'>Grid Size:</label>
                     <select value={rowCount.toString()}
                             id='grid-size-select'
+                            className={'u-select'}
                             onChange={changeGridDimensions}>
                         <option value='10'>10 x 10</option>
                         <option value='25' >25 x 25</option>

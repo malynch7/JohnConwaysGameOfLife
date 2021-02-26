@@ -7,6 +7,9 @@
 #control-panel {
     text-align: center;
 }
+#control-panel label {
+    width: 4.5em;
+}
 
 .button-row button {
     margin: .5em;
@@ -28,7 +31,7 @@
     box-shadow: none;
 }
 
-.grid-select-wrapper label {
+.select-wrapper label {
     margin: 1em;
 }
 
@@ -36,13 +39,14 @@
     background: white;
 }
 
-#grid-size-select {
+.u-select {
     margin: 1em;
     background: green;
     border: none;
     color: white;
     border-radius: 7px;
     padding: .4em 1em;
+    width: 9em;
     box-shadow: 1px 1px 5px grey;
 }
 
@@ -51,7 +55,7 @@
     text-decoration: underline;
 }
 
-.grid-select-wrapper {
+.select-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -70,8 +74,8 @@
 }
 
 .rc-slider {
-    width: 100px;
-    margin: auto 5%;
+    width: 7em;
+    margin: auto 1em;
 }
 
 .rc-slider-track {
@@ -96,16 +100,20 @@
     justify-content: space-evenly;
 }
 
+.parameters {
+   text-align: center;
+}
+
 
 
 
 @media only screen and (min-width: 1250px) {
     #control-panel {
         grid-area: 2 / 3 / 3 / 4;
-        height: 350px;
+        height: 400px;
     }
     .buttons {
-        height: 80%;
+        height: 90%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;

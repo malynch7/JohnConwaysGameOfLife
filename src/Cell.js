@@ -1,10 +1,6 @@
 import './Cell.css';
 
-export default function Cell({data, gridDimensions, updateCell}) {
-
-    const handleClick = () => {
-        updateCell(data.id, !data.isAlive);
-    }
+export default function Cell({data, gridDimensions, applyPatternToGrid, hover, showHoverPattern, removeHoverPattern}) {
 
     const style = (gridDimensions.columns < 11) ? {} : {
         width: `${100 / gridDimensions.columns}%`
@@ -12,8 +8,10 @@ export default function Cell({data, gridDimensions, updateCell}) {
 
     return (
         <div style={style}
-            className = {`cell ${data.isAlive ? 'alive' : ''}`}
-            onClick = {handleClick}
+            className={`cell${data.isAlive ? 'alive' : ''} ${hover ? ' hover-pattern' : ''}`}
+            onClick={() => applyPatternToGrid(data.id)}
+             onMouseEnter={() => showHoverPattern(data.id)}
+             onMouseLeave={removeHoverPattern}
         />
     );
 }

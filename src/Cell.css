@@ -28,17 +28,22 @@
     border-radius: 2px 2px 8px 2px;
 }
 
-.cell.alive {
+.cell.alive,
+.cell.alive.hover-pattern{
     background: var(--cell-color);
     border-radius: 4px;
+    opacity: 1;
 }
 
 .cell:hover,
-.cell:focus {
-    background: #8cb18c;
+.cell:focus,
+.hover-pattern{
+    background: var(--cell-color);
+    opacity: .3;
 }
 
 .cell.alive:hover,
 .cell.alive:focus {
-    background: #64b164;
+    background: var(--cell-color);
+    opacity: .5;
 }

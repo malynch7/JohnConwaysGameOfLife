@@ -1,6 +1,6 @@
 import './InfoPanel.css';
 
-export default function InfoPanel({generation, livingCellCount}) {
+export default function InfoPanel({generation, livingCellCount, totalCells}) {
 
 
     return (
@@ -14,6 +14,7 @@ export default function InfoPanel({generation, livingCellCount}) {
             </ol>
             <h4>Generation: {generation}</h4>
             <h4>Living Cells: {livingCellCount}</h4>
+            <h4>Total Cells: {totalCells}</h4>
         </div>
     );
 }

@@ -9,6 +9,7 @@ html {
 }
 
 .container {
+    color: #402f1c;
     background: burlywood;
     margin: 1em auto 1em auto;
     width: 80%;
