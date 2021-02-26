@@ -8,7 +8,7 @@ export default function Cell({data, gridDimensions, applyPatternToGrid, hover, s
 
     return (
         <div style={style}
-            className={`cell${data.isAlive ? 'alive' : ''} ${hover ? ' hover-pattern' : ''}`}
+            className={`cell${data.isAlive ? ' alive' : ''} ${hover ? ' hover-pattern' : ''}`}
             onClick={() => applyPatternToGrid(data.id)}
              onMouseEnter={() => showHoverPattern(data.id)}
              onMouseLeave={removeHoverPattern}
