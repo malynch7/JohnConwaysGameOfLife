@@ -87,8 +87,6 @@ export default function ControlPanel({grid, setGrid, generation, setGeneration, 
 
 
     useEffect( () => {
-        if (interval.current === null) return;
-
         if (isRunning) {
             interval.current = setInterval(incrementGeneration, tickPeriod);
         }
