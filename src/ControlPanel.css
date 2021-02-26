@@ -28,8 +28,8 @@
     box-shadow: none;
 }
 
-#control-panel label {
-    padding-top: 1.8em;
+.grid-select-wrapper label {
+    margin: 1em;
 }
 
 #control-panel option:hover{
@@ -37,7 +37,7 @@
 }
 
 #grid-size-select {
-    margin: 2em 1em .5em 1em;
+    margin: 1em;
     background: green;
     border: none;
     color: white;
@@ -56,6 +56,47 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+/*speed slider*/
+.speed-slider-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.speed-slider-wrapper label {
+    margin: 1em;
+}
+
+.rc-slider {
+    width: 107px;
+    margin: auto 5%;
+}
+
+.rc-slider-track {
+    background-color: green;
+}
+
+.rc-slider-handle {
+    border: solid 2px green;
+}
+
+.rc-slider-handle:active,
+.rc-slider-handle:hover,
+.rc-slider-handle-click-focused:focus{
+    border-color: var(--cell-color);
+    box-shadow: unset;
+}
+
+.buttons {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
 
 
 @media only screen and (min-width: 960px) {

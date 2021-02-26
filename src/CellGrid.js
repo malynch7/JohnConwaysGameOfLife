@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import Cell from './Cell'
 import './CellGrid.css';
@@ -18,7 +18,7 @@ export default function CellGrid({grid, updateCell}) {
                             className='cell'
                             key={cell.id}
                             data={cell}
-                            updateGrid={updateCell}
+                            updateCell={updateCell}
                         />
                     })
                 }</div>
