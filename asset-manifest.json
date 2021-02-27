@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/JohnConwaysGameOfLife/static/css/main.7cf500a5.chunk.css",
+    "main.css": "/JohnConwaysGameOfLife/static/css/main.69c1566b.chunk.css",
     "main.js": "/JohnConwaysGameOfLife/static/js/main.b5d16b48.chunk.js",
     "main.js.map": "/JohnConwaysGameOfLife/static/js/main.b5d16b48.chunk.js.map",
     "runtime-main.js": "/JohnConwaysGameOfLife/static/js/runtime-main.3b41baf6.js",
@@ -10,7 +10,7 @@
     "static/js/2.ffb07819.chunk.js.map": "/JohnConwaysGameOfLife/static/js/2.ffb07819.chunk.js.map",
     "index.html": "/JohnConwaysGameOfLife/index.html",
     "static/css/2.7fe95f8e.chunk.css.map": "/JohnConwaysGameOfLife/static/css/2.7fe95f8e.chunk.css.map",
-    "static/css/main.7cf500a5.chunk.css.map": "/JohnConwaysGameOfLife/static/css/main.7cf500a5.chunk.css.map",
+    "static/css/main.69c1566b.chunk.css.map": "/JohnConwaysGameOfLife/static/css/main.69c1566b.chunk.css.map",
     "static/js/2.ffb07819.chunk.js.LICENSE.txt": "/JohnConwaysGameOfLife/static/js/2.ffb07819.chunk.js.LICENSE.txt",
     "static/media/App.css": "/JohnConwaysGameOfLife/static/media/bark.bf8aae28.jpg"
   },
@@ -18,7 +18,7 @@
     "static/js/runtime-main.3b41baf6.js",
     "static/css/2.7fe95f8e.chunk.css",
     "static/js/2.ffb07819.chunk.js",
-    "static/css/main.7cf500a5.chunk.css",
+    "static/css/main.69c1566b.chunk.css",
     "static/js/main.b5d16b48.chunk.js"
   ]
 }
