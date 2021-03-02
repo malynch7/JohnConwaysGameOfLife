@@ -38,6 +38,7 @@ The cell grid will reflect the dimensions specified. If changed, the grid will a
 - ReactJS
 - IntelliJ IDEA
 - Webpack
+- Babel
 - Github (Git Bash)
 
 
