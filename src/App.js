@@ -73,7 +73,7 @@ function App() {
     }
 
     return (
-        <div className='main' style={(window.innerWidth > 960) ? {height: window.innerHeight} : {}}>
+        <div className='main' style={(window.innerWidth > 1250) ? {height: window.innerHeight} : {}}>
             <div className={'container grid-container'}>
                 <h1 className='site-header'>John Conway's Game of Life</h1>
                 <h4>Generation: {generation}</h4>
