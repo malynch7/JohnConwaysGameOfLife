@@ -32,6 +32,15 @@ The selected pattern will be inserted into the grid, centered around the origin 
 #### `Grid Size`
 The cell grid will reflect the dimensions specified. If changed, the grid will also be cleared.
 
+## Development Tools
+
+- Javascript / HTML / CSS
+- ReactJS
+- IntelliJ IDEA
+- Webpack
+- Github (Git Bash)
+
+
 ## See More...
 
 [Mark Lynch's Portfolio](https://malynch7.github.io).
