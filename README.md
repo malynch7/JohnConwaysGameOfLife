@@ -11,25 +11,25 @@ The player is presented with a grid of cells. Each cell exists in one of two sta
 
 ## Controls
 
-### `Step`
+#### `Step`
 On Step, the current generation will be incremented by one.
 
-### `Play / Pause`
+#### `Play / Pause`
 On Play, the grid will continuous apply steps until paused.
 
-### `Reset`
+#### `Reset`
 On Reset, the grid will be returned it's prior state at generation 0.
 
-### `Clear`
+#### `Clear`
 On Clear, all cells in the grid will be set to dead.
 
-### `Speed`
+#### `Speed`
 The speed slider controls the interval between steps when `Play` is active, scaling from 1 second to 50 milliseconds (may be limited by cpu performance).
 
-### `Pattern`
+#### `Pattern`
 The selected pattern will be inserted into the grid, centered around the origin cell, when clicked.
 
-### `Grid Size`
+#### `Grid Size`
 The cell grid will reflect the dimensions specified. If changed, the grid will also be cleared.
 
 ## See More...
